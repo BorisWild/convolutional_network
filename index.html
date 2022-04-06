@@ -1,0 +1,80 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+<h1>TensorFlow.js MNIST classifier</h1>
+
+<p id="status">Awaiting TF.js load</p>
+
+<p>See console for even more outputs.</p>
+
+<section class="box">
+
+  <h2>Input Image</h2>
+
+  <p>Input image is a 28x28 pixel greyscale image from MNIST dataset - a real hand drawn digit!</p>
+
+  <canvas id="canvas" width="28" height="28"></canvas>
+
+</section>
+
+<section class="box">
+
+  <h2>Prediction</h2>
+
+  <p>Below you see what number the trained TensorFlow.js model has predicted from the input image.</p>
+
+  <p>Red is a wrong prediction, Green is a correct one.</p>
+
+  <p id="prediction">Training model. Please wait...</p>
+
+</section>
+
+
+
+<!-- Add your site or application content here -->
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+
+<!-- Import TensorFlow.js library -->
+<script src="js/tf.min.js"></script>
+
+<script type="module" src="js/main.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () {
+    ga.q.push(arguments)
+  };
+  ga.q = [];
+  ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'transport', 'beacon');
+  ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
